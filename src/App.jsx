@@ -1,0 +1,31 @@
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Ticker from "./components/Ticker";
+import Services from "./components/Services";
+import Features from "./components/Features";
+import Fleet from "./components/Fleet";
+import Process from "./components/Process";
+import ServiceArea from "./components/ServiceArea";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import StickyCall from "./components/StickyCall";
+
+export default function App() {
+  return (
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <Ticker />
+        <Services />
+        <Features />
+        <Fleet />
+        <Process />
+        <ServiceArea />
+        <Contact />
+      </main>
+      <Footer />
+      <StickyCall />
+    </>
+  );
+}
