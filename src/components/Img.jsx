@@ -4,7 +4,7 @@ import { useState } from "react";
  * Responsive <img>. Pass `image={{ src, srcSet }}` or a plain `src`.
  * Shows a dark placeholder if the file fails to load, so the layout never breaks.
  */
-export default function Img({ image, src, alt, className = "", sizes = "100vw", ...rest }) {
+export default function Img({ image, src, alt, className = "", sizes = "100vw", onLoad, onError, ...rest }) {
   const [failed, setFailed] = useState(false);
   const finalSrc = image?.src ?? src;
 
@@ -18,7 +18,11 @@ export default function Img({ image, src, alt, className = "", sizes = "100vw", 
       alt={alt}
       loading="lazy"
       decoding="async"
-      onError={() => setFailed(true)}
+      onLoad={onLoad}
+      onError={(event) => {
+        setFailed(true);
+        onError?.(event);
+      }}
       className={className}
       {...rest}
     />

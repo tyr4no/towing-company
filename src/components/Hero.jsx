@@ -4,7 +4,7 @@ import { PhoneIcon, WhatsAppIcon } from "./Icons";
 
 const delay = (ms) => ({ animationDelay: `${ms}ms` });
 
-export default function Hero() {
+export default function Hero({ onImageReady }) {
   return (
     <section id="top" className="hero">
       <div className="hero__bg">
@@ -14,6 +14,8 @@ export default function Hero() {
           loading="eager"
           fetchPriority="high"
           className="hero__img"
+          onLoad={onImageReady}
+          onError={onImageReady}
         />
         <div className="hero__overlay" />
       </div>
