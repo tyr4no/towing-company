@@ -1,6 +1,9 @@
 // Single source of truth for all copy, links and photos.
-
-/** Unsplash helper: builds a responsive src + srcSet from a photo id. */
+import hero from "../assets/hero.jpg";
+import raw from "../assets/raw.jpg";
+import old from "../assets/old.jpg";
+import van from "../assets/van.jpg";
+import bmw from "../assets/bmw.jpg";/** Unsplash helper: builds a responsive src + srcSet from a photo id. */
 const photo = (id) => ({
   src: `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&q=75&w=1200`,
   srcSet: [480, 800, 1200, 1800, 2400]
@@ -19,13 +22,13 @@ const photo = (id) => ({
 //   unfall: photo("1592588221162-d0d872c34bf1"),   // damaged car
 // };
 
-  export const PHOTOS = {
-  hero: {src: "src/assets/hero.jpg"},     // tow truck with car on flatbed
-  fleet: {src: "src/assets/raw.jpg"},    // flatbed with a silver car
-  pkw: {src: "src/assets/old.jpg"},      // tow truck towing a car on the road
-  suv: {src: "src/assets/van.jpg"},      // truck on flatbed trailer
-  pannenhilfe: photo("1738101996177-13110d20a973"), // roadside helper next to tow truck
-  unfall: {src: "src/assets/bmw.jpg"},   // damaged car
+export const PHOTOS = {
+  hero: { src: hero },
+  fleet: { src: raw },
+  pkw: { src: old },
+  suv: { src: van },
+  pannenhilfe: photo("1738101996177-13110d20a973"),
+  unfall: { src: bmw },
 };
 
 
