@@ -10,14 +10,24 @@ const photo = (id) => ({
 
 // Placeholder photos from Unsplash (free licence). Swap for your own later:
 // replace photo("...") with { src: "/images/your-file.jpg" }.
-export const PHOTOS = {
-  hero: photo("1730514785075-b065c757b653"),     // tow truck with car on flatbed
-  fleet: photo("1703130931523-5113aa0d4c3c"),    // flatbed with a silver car
-  pkw: photo("1730514784243-f0e7f09c9f50"),      // tow truck towing a car on the road
-  suv: photo("1698998882426-39a6609ab10a"),      // truck on flatbed trailer
+// export const PHOTOS = {
+//   hero: photo("1730514785075-b065c757b653"),     // tow truck with car on flatbed
+//   fleet: photo("1703130931523-5113aa0d4c3c"),    // flatbed with a silver car
+//   pkw: photo("1730514784243-f0e7f09c9f50"),      // tow truck towing a car on the road
+//   suv: photo("1698998882426-39a6609ab10a"),      // truck on flatbed trailer
+//   pannenhilfe: photo("1738101996177-13110d20a973"), // roadside helper next to tow truck
+//   unfall: photo("1592588221162-d0d872c34bf1"),   // damaged car
+// };
+
+  export const PHOTOS = {
+  hero: {src: "src/assets/hero.jpg"},     // tow truck with car on flatbed
+  fleet: {src: "src/assets/raw.jpg"},    // flatbed with a silver car
+  pkw: {src: "src/assets/old.jpg"},      // tow truck towing a car on the road
+  suv: {src: "src/assets/van.jpg"},      // truck on flatbed trailer
   pannenhilfe: photo("1738101996177-13110d20a973"), // roadside helper next to tow truck
-  unfall: photo("1592588221162-d0d872c34bf1"),   // damaged car
+  unfall: {src: "src/assets/bmw.jpg"},   // damaged car
 };
+
 
 export const BUSINESS = {
   name: "M.T. Abschleppdienst & Pannenhilfe",

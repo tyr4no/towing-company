@@ -124,7 +124,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
    ========================================================= */
 .hero { position: relative; display: flex; align-items: center; min-height: 100vh; min-height: 100svh; overflow: hidden; }
 .hero__bg { position: absolute; inset: 0; }
-.hero__img { width: 100%; height: 100%; object-fit: cover; object-position: 65% center; animation: drift 24s ease-in-out infinite alternate; }
+.hero__img { width: 100%; height: 100%; object-fit: cover; object-position: 40% center; animation: drift 24s ease-in-out infinite alternate; }
 .hero__overlay {
   position: absolute; inset: 0;
   background:
