@@ -10,12 +10,13 @@ import ServiceArea from "./components/ServiceArea";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import StickyCall from "./components/StickyCall";
-
+import { Analytics } from "@vercel/analytics/react"
 export default function App() {
   const [heroReady, setHeroReady] = useState(false);
 
   return (
     <>
+    <Analytics />
       {!heroReady && (
         <div className="site-loader" role="status" aria-live="polite">
           <span className="site-loader__mark">M.T.</span>
